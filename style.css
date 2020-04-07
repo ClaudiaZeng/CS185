@@ -6,12 +6,11 @@
 }
 .tab {
     background-color: yellow;
+    padding: 10px;
     font-size: 35px;
-}
-#main-body {
-    display: flex;
 }
 .text{
     background-color: pink;
+    padding: 10px;
     font-size: 25px;
 }

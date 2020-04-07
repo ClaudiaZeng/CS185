@@ -1,0 +1,17 @@
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+.tab {
+    background-color: yellow;
+    font-size: 35px;
+}
+#main-body {
+    display: flex;
+}
+.text{
+    background-color: pink;
+    font-size: 25px;
+}

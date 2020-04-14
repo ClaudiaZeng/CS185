@@ -21,6 +21,7 @@
 .mainpagetext {
     border: 10px solid white;
     background-color: blanchedalmond;
+    margin-top: 20px;
     padding: 30px;
     font-size: 20px;
 }

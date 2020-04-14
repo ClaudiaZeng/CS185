@@ -19,6 +19,8 @@
 }
 
 .mainpagetext {
+    border: 10px solid white;
+    background-color: blanchedalmond;
     padding: 30px;
     font-size: 40px;
 }

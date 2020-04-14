@@ -9,10 +9,6 @@
     font-size: medium;
 }
 
-.tab a {
-    width: auto;
-}
-
 .mainpage{
     display: flex;
 }

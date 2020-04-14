@@ -1,16 +1,73 @@
 .header {
-    background-color: #f1f1f1;
-    padding: 30px;
     text-align: center;
-    font-size: 35px;
+    font-size: large;
 }
 .tab {
-    background-color: yellow;
-    padding: 10px;
-    font-size: 35px;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    font-size: medium;
 }
-.text{
-    background-color: pink;
-    padding: 10px;
-    font-size: 25px;
+
+.tab a {
+    width: auto;
 }
+
+.mainpage{
+    display: flex;
+}
+
+.mainpage img {
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.mainpagetext {
+    padding: 30px;
+    font-size: 40px;
+}
+
+.mainpagetext p{
+    font-size: 40px;
+}
+
+.gridimg{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.gridimg img {
+    margin-top: 20px;
+}
+
+.gridvideo {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gridvideo video {
+    margin-top: 20px;
+}
+
+.pageintro {
+    font-size: 20px;
+    padding: 20px;
+    border: 10px solid white;
+    background-color: rgb(255, 209, 179);
+}
+
+.linkchild{
+    border: 10px solid white;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+}
+
+.linkchild p{
+    padding-left: 70px;
+    font-size: 20px;
+}
+

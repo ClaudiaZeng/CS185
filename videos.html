@@ -3,33 +3,50 @@
 <head>
     <title>Videos</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="header">
         <h1>Videos</h1>
     </div>
     <div class="tab">
-        <a href="index.html">HomePage</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="externallinks.html">External Links</a>
+        <button id="HomePage">HomePage</button>
+        <button id="Images">Images</button>
+        <button id="Videos">Videos</button>
+        <button id="ExternalLinks">External Links</button>
     </div>
-    <div class="gridvideo">
-        <video width="400" height="300" controls>
-            <source src="videos/cat.mp4" type="video/mp4">
-        </video>
-        <video width="400" height="300" controls>
-            <source src="videos/game1.mp4" type="video/mp4">
-        </video>
-        <video width="400" height="300" controls>
-            <source src="videos/game2.mp4" type="video/mp4">
-        </video>
-        <video width="400" height="300" controls>
-            <source src="videos/sbsunset.mp4" type="video/mp4">
-        </video>
-        <video width="400" height="300" controls>
-            <source src="videos/spaceX.MP4" type="video/mp4">
-        </video>
+    <script>
+        document.getElementById("Videos").style.backgroundColor= "rgb(204, 230, 255)";
+    </script>
+    <div class="container">
+        <div class="gridvideo">
+            <video width="400" height="300" onclick="overlayOn('videos/cat.mp4')"><source src="videos/cat.mp4" type="video/mp4"></video>
+            <video width="400" height="300" onclick="overlayOn('videos/game1.mp4')"><source src="videos/game1.mp4" type="video/mp4"></video>
+            <video width="400" height="300" onclick="overlayOn('videos/game2.mp4')"><source src="videos/game2.mp4" type="video/mp4"></video>
+            <video width="400" height="300" onclick="overlayOn('videos/sbsunset.mp4')"><source src="videos/sbsunset.mp4" type="video/mp4"></video>
+            <video width="400" height="300" onclick="overlayOn('videos/spaceX.mp4')"><source src="videos/spaceX.MP4" type="video/mp4"></video>
+        </div>
+        <div id="lightbox" onclick="overlayOff()">
+
+        </div>
+        <button id="backBtn">Back to Top</button>
     </div>
+    <script>
+        function overlayOn(src){
+            console.log("on")
+            const container = document.querySelector("#lightbox")
+            var video = document.createElement("VIDEO")
+            video.setAttribute("src", src)
+            video.setAttribute("width", "800")
+            video.setAttribute("height", "600")
+            video.setAttribute("controls", "controls")
+            lightbox.appendChild(video)
+        }
+        function overlayOff(){
+            console.log("off")
+            const lightbox = document.querySelector("#lightbox")
+            lightbox.removeChild(lightbox.lastChild)
+        }
+    </script>
 </body>
 </html>

@@ -3,33 +3,59 @@
 <head>
     <title>Images</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="header">
         <h1>Images</h1>
     </div>
     <div class="tab">
-        <a href="index.html">HomePage</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="externallinks.html">External Links</a>
+        <button id="HomePage">HomePage</button>
+        <button id="Images">Images</button>
+        <button id="Videos">Videos</button>
+        <button id="ExternalLinks">External Links</button>
     </div>
-    <div class="gridimg">
-        <img src="images/seattle1.JPG" style="width:100%">
-        <img src="images/seattle2.JPG" style="width:100%">
-        <img src="images/ac1.jpeg" style="width:100%">
-        <img src="images/ac2.JPG" style="width:100%">
-        <img src="images/food1.JPG" style="width:100%">
-        <img src="images/food2.JPG" style="width:100%">
-        <img src="images/ny1.JPG" style="width:100%">
-        <img src="images/ny2.JPG" style="width:100%">
-        <img src="images/ny3.JPG" style="width:100%">
-        <img src="images/orlando1.JPG" style="width:100%">
-        <img src="images/orlando2.JPG" style="width:100%">
-        <img src="images/orlando3.JPG" style="width:100%">
-        <img src="images/paint1.JPG" style="width:100%">
-        <img src="images/paint2.JPG" style="width:100%">
-        <img src="images/sb.JPG" style="width:100%">
+    <script>
+        document.getElementById("Images").style.backgroundColor= "rgb(204, 230, 255)";
+    </script>
+    <div class="container">
+        <div class="gridimg">
+            <img src="images/seattle1.JPG" onclick="overlayOn('images/seattle1.JPG')" style="width:100%">
+            <img src="images/seattle2.JPG" onclick="overlayOn('images/seattle2.JPG')" style="width:100%">
+            <img src="images/ac1.jpeg" onclick="overlayOn('images/ac1.jpeg')" style="width:100%">
+            <img src="images/ac2.JPG" onclick="overlayOn('images/ac2.JPG')" style="width:100%">
+            <img src="images/food1.JPG" onclick="overlayOn('images/food1.JPG')" style="width:100%">
+            <img src="images/food2.JPG" onclick="overlayOn('images/food2.JPG')" style="width:100%">
+            <img src="images/flowers.JPG" onclick="overlayOn('images/flowers.JPG')" style="width:100%">
+            <img src="images/ny1.JPG" onclick="overlayOn('images/ny1.JPG')" style="width:100%">
+            <img src="images/ny2.JPG" onclick="overlayOn('images/ny2.JPG')" style="width:100%">
+            <img src="images/ny3.JPG" onclick="overlayOn('images/ny3.JPG')" style="width:100%">
+            <img src="images/orlando1.JPG" onclick="overlayOn('images/orlando1.JPG')" style="width:100%">
+            <img src="images/orlando2.JPG" onclick="overlayOn('images/orlando2.JPG')" style="width:100%">
+            <img src="images/orlando3.JPG" onclick="overlayOn('images/orlando3.JPG')" style="width:100%">
+            <img src="images/paint1.JPG" onclick="overlayOn('images/paint1.JPG')" style="width:100%">
+            <img src="images/paint2.JPG" onclick="overlayOn('images/paint2.JPG')" style="width:100%">
+            <img src="images/sb.JPG" onclick="overlayOn('images/sb.JPG')" style="width:100%">
+        </div>
+        <div id="lightbox" onclick="overlayOff()">
+        </div>
+        <button id="backBtn">Back to Top</button>
     </div>
+    <script>
+        function overlayOn(src){
+            console.log("on")
+            const container = document.querySelector("#lightbox")
+            var img = document.createElement("IMG")
+            img.setAttribute("src", src)
+            img.setAttribute("width", "100%")
+            img.setAttribute("height", "100%")
+            lightbox.appendChild(img)
+        }
+        function overlayOff(){
+            console.log("off")
+            const lightbox = document.querySelector("#lightbox")
+            lightbox.removeChild(lightbox.lastChild)
+        }
+    </script>
 </body>
 </html>

@@ -3,24 +3,24 @@
 <head>
     <title>ExternalLinks</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="header">
         <h1>External Links</h1>
     </div>
     <div class="tab">
-        <a href="index.html">HomePage</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="externallinks.html">External Links</a>
+        <button id="HomePage">HomePage</button>
+        <button id="Images">Images</button>
+        <button id="Videos">Videos</button>
+        <button id="ExternalLinks">External Links</button>
     </div>
+    <script>
+        document.getElementById("ExternalLinks").style.backgroundColor= "rgb(204, 230, 255)";
+    </script>
     <div class="pageintro">
-        <h2>
-            About
-        </h2>
-        <p>
-            This page has some of my favourite shows, performance, art online resources that I want to share. Click the image, then you will be redirect to the page.
-        </p>
+        <h2>About</h2>
+        <p>This page has some of my favourite shows, performance, art online resources that I want to share. Click the image, then you will be redirect to the page.</p>
     </div>
     <div class="links">
         <div class="linkchild 1">
@@ -36,5 +36,6 @@
             <p>MoMA Online Course offered in Contemporary Art, Fashion as Design, Photography, etc...</p>
         </div>
     </div>
+    <button id="backBtn">Back to Top</button>
 </body>
 </html>

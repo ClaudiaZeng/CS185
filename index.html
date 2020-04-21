@@ -3,27 +3,28 @@
 <head>
     <title>Welcome</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <div class="header">
         <h1>Welcome</h1>
     </div>
     <div class="tab">
-        <a href="index.html">HomePage</a>
-        <a href="images.html">Images</a>
-        <a href="videos.html">Videos</a>
-        <a href="externallinks.html">External Links</a>
+        <button id="HomePage">HomePage</button>
+        <button id="Images">Images</button>
+        <button id="Videos">Videos</button>
+        <button id="ExternalLinks">External Links</button>
     </div>
+    <script>
+        document.getElementById("HomePage").style.backgroundColor= "rgb(204, 230, 255)";
+    </script>
     <div class="mainpage">
-        <img src="images/claudiazeng.png" style="width:50%">
+        <img src="images/claudiazeng.png">
         <div class="mainpagetext">
-            <h2>
-                A Bit About Me
-            </h2>
-            <p>
-                Hello everyone. My name is Claudia Zeng and I am currently a senior CS student at UC Santa Barbara. Welcome to my website and hope you have a good day :)
-            </p>
+            <h2>A Bit About Me</h2>
+            <p>Hello everyone. My name is Claudia Zeng and I am currently a senior CS student at UC Santa Barbara. Welcome to my website and hope you have a good day :)</p>
         </div>
+        <button id="backBtn">Back to Top</button>
     </div>
 </body>
 </html>
